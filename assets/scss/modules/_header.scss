@@ -1,0 +1,250 @@
+header{
+    background-color: $white;
+    @include media-breakpoint-up(lg){
+        position: sticky;
+        top: 0;
+        z-index: 1050;
+        &.header-sticky{
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            .navbar-brand img{
+                display: none;
+            }
+        }
+    }
+    color: $black;
+    nav.navbar{
+        padding: 15px 0;
+    }
+    .navbar-brand img{
+        max-width: 200px;
+    }
+    .navbar-nav{
+        margin: auto;
+        align-items: center;
+        --bs-nav-link-color: #000000;
+        --bs-navbar-active-color: #F1592A;
+        .nav-item{
+            padding: 0 18px;
+        }
+        .nav-link{
+            font-size: 1.2rem;
+            color: #000 !important;
+            padding: 0 !important;
+            &.active,&:hover{
+                border-bottom: 3px solid var(--bs-navbar-active-color);
+            }
+        }
+    }
+    .header-icons{
+        a{
+            &:not(:last-child){
+                margin-right: 20px;
+            }
+            position: relative;
+        }
+        i{
+            font-size: 1.7rem;
+            color: $white;
+        }
+        .badge{
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: $white;
+            border-radius: 50%;
+            color: $black;
+            display: grid;
+            place-items: center;
+            top: -20px;
+            right: -10px;
+        }
+    }
+    .navbar-toggler{
+        font-size: 2rem;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        &:not(.collapsed){
+            .hamburger-bar{
+               &.bar1{
+                transform: translate(1px, 5px) rotate(45deg);
+               }
+               &.bar2{
+                opacity: 0;
+                margin: 0;
+               }
+               &.bar3{
+                transform:rotate(-45deg) ;
+               }
+            }
+        }
+        .hamburger-bar{
+            width: 35px;
+            height: 3px;
+            display: block;
+            background-color: $primary;
+            transition: all 0.4s ease-in-out;
+            &.bar2{
+                margin: 8px 0;
+                opacity: 1;
+            }
+            &.bar1{
+                transform: translate(0,0) rotate(0deg);
+            }
+            &.bar3{
+            transform: translate(0,0) rotate(-0deg) ;
+            }
+        }
+    }
+    .navbar-collapse{
+        @include media-breakpoint-down(lg){
+        position: absolute;
+        inset: 80px 20% auto 0;
+        z-index: 10;
+        height: calc(100vh - 65px);
+        overflow: scroll;
+        transition: none;
+        transform: translateX(-800px);
+        transition: transform 0.2s ease-in;
+        background-color: $white;
+        &.show{
+            transform: translateX(0); 
+        }
+        .nav-item{
+            padding: 10px  25px;
+        }
+        a{
+            font-size: 1.3rem;
+            color: $black;
+            &.active{
+                color: $primary !important;
+                font-weight: 600;
+                border-bottom: none !important;
+            }
+            i{
+                font-size: 1.6rem;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+        }
+        .button-row{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+        .header-button{
+            width: 100%;
+            padding-block: 20px;
+            background-color: $card-bg !important;
+            border-radius: 0 !important;
+            border: none !important;
+            color: $black !important;
+            &.active{
+                color: $primary !important;
+                border-bottom: 2px solid $primary !important;
+            }
+        }
+        .nav-tabs{
+            @include media-breakpoint-up(lg){
+                display: none;
+            }
+            .nav-item{
+                padding: 0;
+                flex-grow: 1;
+            }
+        } 
+        }
+        @include media-breakpoint-up(lg){
+            justify-content: center;
+            .nav-tabs{
+                display: none;
+            } 
+        }
+        
+    }
+
+    .nav-link.dropdown-toggle{
+        &::after{
+            display: none;
+        }
+        i{
+            display: inline-block;
+            transition: transform 0.3s ease-in-out;
+        }
+        &.show i{
+            transform: rotate(180deg);
+        }
+
+        @include media-breakpoint-down(lg){
+            position: relative;
+            i{
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 18px;
+                line-height: 0;
+            }
+        }
+    }
+
+    .dropdown-menu{
+        border-radius: 0;
+        padding: 0;
+        left: 18px !important;
+        border: none;
+        top: 58px !important;
+        .dropdown-item{
+            padding: 10px 20px;
+            a{
+                text-decoration: none;
+                color: $text-color;
+            }
+            &:hover{
+                background-color: $primary;
+                a{
+                    color: white;
+                }
+            }
+        }
+    }
+
+   
+}
+.slideModal{
+    .modal-dialog{
+        position: fixed;
+        inset: 0 0 0 auto;
+        height: 100vh;
+        margin: 0;
+        transition: all 1s ease-in-out;
+        @include media-breakpoint-down(sm){
+            width: 90%;
+        }
+    }
+    .modal-content{
+        height: 100%;
+        border-radius: 0;
+        color:black;
+    }
+}
+.social-media-logins{
+    text-align: center;
+    margin-bottom: 25px;
+    a img{
+        width: 50px;
+        border: 1px solid black;
+        padding: 5px;
+    }
+}
+
+.top-header{
+    background-color: $primary;
+    padding: 10px 0;
+    font-weight: 600;
+    color: $white;
+    @include media-breakpoint-down(md){
+       display: none;
+    }
+}
+

@@ -1,0 +1,128 @@
+input[type=radio],input[type=checkbox]{
+    display: none;
+}
+input[type=radio] + label{
+    padding-left: 40px;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        border: 1px solid $primary;
+    }
+}
+input[type=radio]:checked + label{
+    &::before{
+        border: 6px solid $primary;
+    }
+}
+
+// checkbox
+input[type=checkbox],input[type=checkbox]{
+    display: none;
+}
+input[type=checkbox] + label{
+    padding-left: 30px;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid $primary;
+    }
+}
+input[type=checkbox]:checked + label{
+    &::after{
+        content: "\ea41";
+        font-family: boxicons!important;
+        font-weight: 400;
+        font-style: normal;
+        position: absolute;
+        left: -5px;
+        top: -15px;
+        @include media-breakpoint-down(sm){
+            top: -12px; 
+        }
+        font-size: 2rem;
+    }
+}
+
+
+
+.btn-radios{
+    .btn-radio-label{
+        text-decoration: none;
+        color: $primary;
+        border: 1px solid $primary;
+        padding: 5px 15px;
+        border-radius: 24px;
+        cursor: pointer;
+        &:not(:last-child){
+            margin-right: 5px;
+        }
+        &::before,&::after{
+            display: none;
+        }
+    }
+    input:checked + label{
+        background-color: $primary;
+        color: $white;
+    }
+} 
+.img-radios{
+    label{
+        padding-left: 0 !important;
+        margin-right: 5px;
+        &::before,&::after{
+            display: none;
+        }
+    }
+    .option{
+        border: 3px solid transparent;
+        img{
+            width: 50px;
+            height: 50%;
+            object-fit: cover;
+        }
+    }
+    input:checked + label .option{
+        border: 3px solid $primary;
+        padding: 2px;
+    }
+}
+.product-list{
+    .option{
+        img{
+            width: 40px;
+            height: 40%;
+            object-fit: cover;
+        }
+    }
+}
+.wishlist-toggle{
+    label{
+        &::before,&::after{
+            display: none;
+        }
+        padding-left: 0 !important;
+    }
+    input:checked + label button{
+        background-color: $primary;
+        border-color: transparent;
+        i{
+            color: white;
+        }  
+    }
+    button{
+        pointer-events: none;
+    }
+}

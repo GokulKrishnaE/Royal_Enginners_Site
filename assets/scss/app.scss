@@ -1,0 +1,20 @@
+// bootstrap v5.2.3
+@import './bootstrap/_bootstrap';
+
+// custom variables
+@import './modules/variables';
+
+// plugins
+@import './plugins/bootstap-icons';
+@import './plugins/slick';
+
+// custom modules
+@import './modules/buttons';
+@import './modules/custom-checkbox-radio';
+@import './modules/header';
+@import './modules/footer';
+@import './modules/hero-section';
+@import './modules/section';
+@import './modules/card';
+@import './modules/process';
+@import './modules/global';

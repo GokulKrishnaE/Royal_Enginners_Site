@@ -1,0 +1,215 @@
+footer{
+    background-color: $tertiary;
+    text-align: center;
+    position: relative;
+    color: $white;
+    padding: 20px 0;
+    .footer-head{
+        color: rgb(106, 106, 106);
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+    .footer-links{
+        li{
+            color: $black;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+    }
+    .footer-content{
+        position: relative;
+        z-index: 2;
+        padding: 40px 0;
+        border-top: 2px solid rgba($color: $primary, $alpha: 0.2);
+    }
+    .footer-title{
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    .footer-desc{
+        max-width: 700px;
+        margin: auto;
+        font-style: italic;
+    }
+    .footer-logo{
+        img{
+            width: 100%;
+            max-width: 200px;
+            mix-blend-mode: multiply;
+        }
+    }
+    .social-links{
+        margin-top: 30px;
+        a{
+            font-size: 18px;
+            display: inline-block;
+            background: #19826d;
+            color: #fff;
+            line-height: 1;
+            padding: 8px 0;
+            margin-right: 4px;
+            border-radius: 50%;
+            text-align: center;
+            width: 36px;
+            height: 36px;
+            transition: 0.3s;
+            &:hover{
+                background: #fcb102;
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+    .credits{
+        margin-top: 50px;
+    }
+
+    .col-1,.col-2{
+        text-align: left;
+    }
+}
+.footer-fixed-menu{
+    display: none;
+    @include media-breakpoint-down(lg){
+        display: block;
+        position: fixed;
+        inset: auto 0 0 0;
+        background-color: $primary;
+        padding: 15px 0;
+        z-index: 100;
+        ul{
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+        }
+        li{
+            div{
+                display: flex;
+                flex-direction: column;
+            }
+            .footer-menu-icon{
+                font-size: 1.8rem;
+            }
+            .footer-menu-title{
+                color: white;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+.form-floating>.form-control, .form-floating>.form-control-plaintext, .form-floating>.form-select{
+    height: auto;
+}
+.contact-form{
+    .form-control{
+        background-color: #00131f;
+        color: white;
+        border-color: #004875;
+    }
+    label{
+        color: white !important;
+    }
+}
+p.footer-content{
+    font-size: 1.2rem;
+}
+.address-items{
+    .address-item{
+        padding-left: 35px;
+        position: relative;
+        i{
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 20px;
+            color: $tertiary;
+        }
+        span{
+            font-size: 1.1rem;
+        }
+        span:not(:last-child){
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.footer-bottom{
+    background-color: #001928;
+    padding: 20px 0;
+    span,i,p{
+        font-size: 20px;
+        @include media-breakpoint-down(lg){
+            font-size: 16px;
+        }
+        color: whitesmoke;
+    }
+}
+
+.fixed-contact{
+    .contact-icon{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #25D366;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        inset: auto 40px 250px auto;
+        z-index: 1051;
+        a{
+            color: white;
+        }
+        i{
+            font-size: 30px;
+        }
+        @include media-breakpoint-down(lg){
+            width: 40px;
+            height: 40px;
+            inset: auto 40px 150px auto;
+            i{
+                font-size: 20px;
+                
+            }
+        }
+        &.phone{
+            background-color: $primary;
+            bottom: 150px;
+            @include media-breakpoint-down(lg){
+                bottom: 100px;
+            }
+        }
+    }
+}
+
+.back-to-top{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(196, 196, 196);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: auto 40px 50px auto;
+    cursor: pointer;
+    display: none;
+    &.active{
+        display: flex;
+    }
+    i{
+        color: black;
+        font-size: 30px;
+
+    }
+    @include media-breakpoint-down(lg){
+        width: 40px;
+        height: 40px;
+        i{
+            font-size: 20px;
+            
+        }
+    }
+}

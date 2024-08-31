@@ -1,0 +1,39 @@
+.process-section{
+    height: calc(100vh - 148px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a{
+        display: block;
+        color: $primary;
+        font-weight: 600;
+    }
+}
+.process-box{
+    background-color: $primary-fade;
+    padding: 60px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 20px;
+    h2{
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    .form-item{
+        label{
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .form-control{
+            border-color: $primary;
+        }
+        &:not(:last-child){
+            margin-bottom: 25px;
+        }
+    }
+    button{
+        width: 100%;
+    }
+}
