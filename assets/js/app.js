@@ -57,8 +57,8 @@ $('#clients-slider').slick({
   prevArrow: false,
   nextArrow: false,
   infinite: true,
-  slidesToShow: 5,
-  slidesToScroll: 2,
+  // slidesToShow: 5,
+  // slidesToScroll: 2,
   autoplay: true
 });
     

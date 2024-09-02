@@ -25,6 +25,11 @@ header{
         --bs-navbar-active-color: #F1592A;
         .nav-item{
             padding: 0 18px;
+            &.nohover .nav-link{
+                &:hover{
+                    border: none !important;
+                }
+            }
         }
         .nav-link{
             font-size: 1.2rem;
@@ -239,10 +244,10 @@ header{
 }
 
 .top-header{
-    background-color: $primary;
+    background-color: $secondary;
     padding: 10px 0;
     font-weight: 600;
-    color: $white;
+    color: $black;
     @include media-breakpoint-down(md){
        display: none;
     }
