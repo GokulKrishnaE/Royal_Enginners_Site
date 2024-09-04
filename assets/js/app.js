@@ -72,15 +72,54 @@ $(document).ajaxStop(function(){
 $('.card-title').matchHeight()
 
 $('#clients-slider').slick({
+  speed: 5000,
   autoplay: true,
   autoplaySpeed: 0,
-  speed: 8000,
-  arrows: false,
-  swipe: false,
-  slidesToShow: 4,
   cssEase: 'linear',
-  pauseOnFocus: false,
-  pauseOnHover: false,
+  slidesToShow: 7,
+  slidesToScroll: 1,
+  infinite: true,
+  swipeToSlide: true,
+  centerMode: true,
+  focusOnSelect: true,
+  dots: false,
+  arrows: false,
+  responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+            }
+          }
+          ]
 });
+
+
+const sections = document.querySelectorAll('.section');
+
+  const observerOptions = {
+    threshold: 0.5
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      const sectionTitle = entry.target.querySelector('.section-title');
+      if (entry.isIntersecting) {
+        sectionTitle.classList.add('visible');
+      } else {
+        sectionTitle.classList.remove('visible');
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
     
 })

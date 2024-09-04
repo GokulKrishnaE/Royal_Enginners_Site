@@ -1,5 +1,5 @@
 footer{
-    background-color: $white;
+    background-color: #f9f9f9;;
     text-align: center;
     position: relative;
     color: $white;
@@ -9,10 +9,10 @@ footer{
     }
     .footer-head{
         color: rgb(0, 0, 0);
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         text-transform: uppercase;
         letter-spacing: 1.5px;
-        font-weight: 600;
+        font-weight: 700;
         margin-bottom: 25px;
     }
     .footer-links{
@@ -23,7 +23,7 @@ footer{
             a{
                 color: inherit;
                 text-decoration: none;
-                font-weight: 300;
+                font-weight: 400;
             }
         }
     }
@@ -279,5 +279,20 @@ p.footer-content{
         i{
             animation: flipAnimation 0.5s ease-in-out;
         }
+    }
+}
+
+.backToTop{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid $secondary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    i{
+        font-size: 1.5rem;
+        color: $secondary;
     }
 }

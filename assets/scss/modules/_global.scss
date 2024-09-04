@@ -10,7 +10,7 @@
 }
 html{
     @include media-breakpoint-down(sm){
-        font-size: 90%;
+        font-size: 80%;
     }
 }
 
@@ -194,6 +194,10 @@ a{
 .icon-content{
     display: flex;
     align-items: center;
+    transition: transform 0.5s ease-in-out;
+    &:hover{
+        transform: scale(1.1);
+    }
     .iconHolder{
         width: 60px;
         height: 60px;

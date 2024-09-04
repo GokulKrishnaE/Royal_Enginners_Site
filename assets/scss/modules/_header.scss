@@ -30,8 +30,9 @@ header{
         .nav-item{
             padding: 0 18px;
             &.nohover .nav-link{
+                border-bottom: none !important;
                 &:hover{
-                    border: none !important;
+                    border-bottom: none !important;
                 }
             }
             &:last-child{
@@ -42,6 +43,8 @@ header{
             font-size: 1.2rem;
             color: #000 !important;
             padding: 0 !important;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease-in-out;
             &.active,&:hover{
                 border-bottom: 3px solid var(--bs-navbar-active-color);
             }
