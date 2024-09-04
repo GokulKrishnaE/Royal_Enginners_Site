@@ -43,6 +43,7 @@ footer{
         font-style: italic;
     }
     .footer-logo{
+        margin-left: -20px;
         img{
             width: 100%;
             max-width: 200px;
@@ -224,10 +225,16 @@ p.footer-content{
 
 .footerFixedMenu{
     position: fixed;
-    inset: auto 80px 180px auto;
-    display: flex;
+    inset: auto 80px 80px auto;
     flex-direction: column;
     gap: 5px;
+    display: none;
+    @include media-breakpoint-down(md){
+        inset: auto 15px 40px auto;
+    }
+    &.active{
+        display: flex;
+    }
     .fixedItem{
         padding: 15px;
         &:first-child{
@@ -242,12 +249,35 @@ p.footer-content{
         &:nth-child(3){
             background-color: $tertiary;
         }
+        i{
+            display: inline-block;
+        }
+        &:hover{
+            i{
+                animation: flipAnimation 0.5s ease-in-out;
+            }
+        }
     }
 }
 
 .fixedWhatsapp{
     position: fixed;
     inset: auto auto 80px 80px;
+    @include media-breakpoint-down(md){
+        inset: auto auto 40px 15px;
+    }
     background: #25D366;
     padding: 15px 20px;
+    display: none;
+    &.active{
+        display: flex;
+    }
+    i{
+        display: inline-block;
+    }
+    &:hover{
+        i{
+            animation: flipAnimation 0.5s ease-in-out;
+        }
+    }
 }

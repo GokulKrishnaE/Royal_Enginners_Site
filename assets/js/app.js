@@ -29,6 +29,20 @@ $(document).ready(function(){
     }
   })
 
+  $('.btn')
+      .on('mouseenter', function(e) {
+        var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+        $(this).find('span').css({top:relY, left:relX})
+      })
+      .on('mouseout', function(e) {
+        var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+        $(this).find('span').css({top:relY, left:relX})
+      });
+
 })
 
 $(document).ajaxStop(function(){
@@ -42,6 +56,11 @@ $(document).ajaxStop(function(){
     } else {
        $('header').removeClass('header-sticky');
     }
+    if ($(this).scrollTop() > 600) {
+       $('.fixedWhatsapp,.footerFixedMenu').addClass('active');
+    } else {
+      $('.fixedWhatsapp,.footerFixedMenu').removeClass('active');
+    }
  });
 
  $('#scrollToTop').click(function(e) {
@@ -53,13 +72,15 @@ $(document).ajaxStop(function(){
 $('.card-title').matchHeight()
 
 $('#clients-slider').slick({
-  dots: false,
-  prevArrow: false,
-  nextArrow: false,
-  infinite: true,
-  // slidesToShow: 5,
-  // slidesToScroll: 2,
-  autoplay: true
+  autoplay: true,
+  autoplaySpeed: 0,
+  speed: 8000,
+  arrows: false,
+  swipe: false,
+  slidesToShow: 4,
+  cssEase: 'linear',
+  pauseOnFocus: false,
+  pauseOnHover: false,
 });
     
 })
