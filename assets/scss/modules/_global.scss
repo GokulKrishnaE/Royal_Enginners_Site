@@ -32,6 +32,9 @@ main{
         padding: 0 20px;
     }
 }
+h1,.h1{
+    font-size: 3.5rem;
+}
 a{
     color: $secondary;
     font-weight: 500;
@@ -235,5 +238,39 @@ a{
     }
     100% {
         transform: rotateY(0deg);
+    }
+}
+
+.spotlight {
+    padding: 10px;
+    border: 2px solid #d5d5d5;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    &:hover{
+        border-color: $tertiary;
+    }
+}
+
+.contactUsForm{
+    max-width: 500px;
+    margin: 0 auto;
+    .form-item{
+        margin-bottom: 20px;
+    }
+    label{
+        margin-bottom: 8px;
+    }
+}
+.scrollDownAnimate{
+    position: fixed;
+    font-size: 2rem;
+    inset: auto auto 80px 40px;
+    display: none;
+    animation: updownanimation 0.3s alternate-reverse infinite;
+    &.visible{
+        display: block;
+    }
+    @include media-breakpoint-down(md){
+        inset: auto 20px 20px auto;
     }
 }

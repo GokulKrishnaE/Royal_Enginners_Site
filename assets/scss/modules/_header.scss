@@ -49,6 +49,11 @@ header{
                 border-bottom: 3px solid var(--bs-navbar-active-color);
             }
         }
+        @include media-breakpoint-down(lg){
+            .nav-link.dropdown-toggle{
+                border-bottom: none !important;
+            }
+        }
     }
     .header-icons{
         a{
@@ -216,7 +221,7 @@ header{
         border: none;
         top: 58px !important;
         .dropdown-item{
-            padding: 10px 20px;
+            padding: 0;
             @include media-breakpoint-down(lg){
                 a{
                     font-size: 1.2rem;
@@ -228,11 +233,13 @@ header{
             a{
                 text-decoration: none;
                 color: $text-color;
+                display: block;
+                padding: 10px 20px;
             }
             &:hover{
-                background-color: $primary;
                 a{
                     color: white;
+                    background-color: $primary;
                 }
             }
         }

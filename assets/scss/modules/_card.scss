@@ -64,7 +64,7 @@
             height: 100%;
             width: 100%;
             transition: all 0.3s ease-in-out;
-            animation: cardAnimation 0.5s alternate-reverse infinite;
+            animation: updownanimation 0.5s alternate-reverse infinite;
         }
         &:hover{
             .card-data{
@@ -110,7 +110,7 @@
     }
 }
 
-@keyframes cardAnimation{
+@keyframes updownanimation{
     0%{
         transform: translateY(-1px);
     }
