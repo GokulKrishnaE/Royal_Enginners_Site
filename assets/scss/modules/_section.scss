@@ -161,7 +161,7 @@ p.section-content{
 }
 .clients-section{
     background-color: #fff;
-    padding-bottom: 60px;
+    padding-bottom: 0;
     .section-title{
         margin-bottom: 60px;
     }
@@ -223,10 +223,10 @@ p.section-content{
 
 @keyframes locationAnimation{
     0%{
-        transform: translateY(-5px);
+        transform: translateY(-2px);
     }
     100%{
-        transform: translateY(5px);
+        transform: translateY(2px);
     }
 }
 

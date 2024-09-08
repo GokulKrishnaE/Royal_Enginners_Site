@@ -147,11 +147,6 @@ header{
                 font-weight: 600;
                 border-bottom: none !important;
             }
-            i{
-                font-size: 1.6rem;
-                margin-right: 10px;
-                vertical-align: middle;
-            }
         }
         .button-row{
             display: flex;
@@ -241,6 +236,33 @@ header{
                     color: white;
                     background-color: $primary;
                 }
+            }
+        }
+    }
+
+    .headerIcon{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i{
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        &.phone{
+            background-color: #90fffa;
+            i{
+                animation: pop 0.5s ease-in-out 1s infinite;
+            }
+        }
+        &.whatsapp{
+            background-color: #25d366;
+            i{
+                animation: rotate-vertical 2s linear 1s infinite;
+                color: $white;
             }
         }
     }

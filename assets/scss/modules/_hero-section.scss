@@ -93,10 +93,9 @@
         left: 50px;
         top: 50%;
         transform: translateY(-50%);
-        // @include media-breakpoint-down(lg){
-        //     top: 90%;
-        //     transform: translateY(-90%);
-        // }
+        @media (min-width:991px) and (max-width:1500px){
+            left: 20px;
+        }
         @include media-breakpoint-down(md){
             top: auto;
             bottom: -30px;
@@ -107,12 +106,14 @@
         &.right-arrow{
             right: 50px;
             left: auto;
+            @media (min-width:991px) and (max-width:1500px){
+                right: 20px;
+            }
         }
     }
     .slick-arrow-button{
-        background-color: transparent;
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         outline: none;
         border: none;
@@ -120,10 +121,17 @@
         z-index: 3;
         display: grid;
         place-items: center;
+        font-size: 25px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 4px #a7a7a7;
         @include media-breakpoint-down(lg){
-            width: 40px;
-            height: 40px;
-            font-size: 3rem;
+            width: 35px;
+            height: 35px;
+            font-size: 25px;
             left: 20px;
             &.right-arrow{
                 right: 20px;

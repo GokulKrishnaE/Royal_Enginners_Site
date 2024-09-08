@@ -227,7 +227,7 @@ p.footer-content{
     position: fixed;
     inset: auto 80px 80px auto;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
     display: none;
     @include media-breakpoint-down(md){
         inset: auto 15px 40px auto;
@@ -236,18 +236,39 @@ p.footer-content{
         display: flex;
     }
     .fixedItem{
-        padding: 15px;
-        &:first-child{
-            background-color: $primary;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        i{
+            font-size: 1.5rem;
         }
-        &:nth-child(2){
-            background-color: $secondary;
+        @include media-breakpoint-down(sm){
+            width: 35px;
+            height: 35px;
+            i{
+                font-size: 1rem;
+            }
+        }
+        &:first-child{
+            background-color: #90fffa;
             i{
                 color: $black;
             }
         }
+        &:nth-child(2){
+            background-color: #c71610;
+            i{
+                color: $white;
+            }
+        }
         &:nth-child(3){
-            background-color: $tertiary;
+            background: linear-gradient(115deg, rgb(249, 206, 52), rgb(238, 42, 123), rgb(98, 40, 215));
+        }
+        &:nth-child(4){
+            background-color: #EC0F02;
         }
         i{
             display: inline-block;
@@ -268,12 +289,31 @@ p.footer-content{
     }
     background: #25D366;
     padding: 15px 20px;
-    display: none;
-    &.active{
-        display: flex;
-    }
+    display: flex;
+    border-radius: 50%;
+    animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     border-radius: 50%;
+    //     padding: 25px;
+    //     border: 5px solid #25d366;
+    //     opacity: 0.75;
+    //     animation-name: pulse-border;
+    //     animation-duration: 1.5s;
+    //     animation-timing-function: ease-out;
+    //     animation-iteration-count: infinite;
+    // }
+    
+    // &.active{
+    //     display: flex;
+    // }
     i{
         display: inline-block;
+        font-size: 2rem;
     }
     &:hover{
         i{
@@ -294,5 +334,14 @@ p.footer-content{
     i{
         font-size: 1.5rem;
         color: $secondary;
+        animation: updownanimation .5s alternate-reverse infinite;
     }
+}
+.pwdby{
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-size: 1rem !important;
+    letter-spacing: 3px;
+    font-weight: 400;
 }
