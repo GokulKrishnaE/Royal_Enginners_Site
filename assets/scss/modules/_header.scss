@@ -390,6 +390,10 @@ header{
         height: 40px;
         border-radius: 50%;
         font-size: 1.3rem;
+        transition: transform 0.3s ease-in-out;
+        &:hover{
+            transform: rotate(180deg);
+        }
     }
     .logo{
         max-width: 200px;
