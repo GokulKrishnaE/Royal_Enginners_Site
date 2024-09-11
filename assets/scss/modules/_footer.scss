@@ -225,12 +225,12 @@ p.footer-content{
 
 .footerFixedMenu{
     position: fixed;
-    inset: auto 80px 80px auto;
+    inset: auto auto 80px 80px;
     flex-direction: column;
     gap: 15px;
     display: none;
     @include media-breakpoint-down(md){
-        inset: auto 15px 40px auto;
+        inset: auto auto 40px 15px;
     }
     &.active{
         display: flex;
@@ -246,26 +246,26 @@ p.footer-content{
             font-size: 1.5rem;
         }
         @include media-breakpoint-down(sm){
-            width: 35px;
-            height: 35px;
+            width: 45px;
+            height: 45px;
             i{
-                font-size: 1rem;
+                font-size: 1.3rem;
             }
         }
         &:first-child{
-            background-color: #90fffa;
+            background: linear-gradient(45deg, #325193 8%, #1e5be0 100%);;
             i{
-                color: $black;
+                color: $white;
             }
         }
         &:nth-child(2){
-            background-color: #c71610;
+            background-color: #25D366;
             i{
                 color: $white;
             }
         }
         &:nth-child(3){
-            background: linear-gradient(115deg, rgb(249, 206, 52), rgb(238, 42, 123), rgb(98, 40, 215));
+            background: linear-gradient(45deg,#d32c19 8%,#da6e30 100%);
         }
         &:nth-child(4){
             background-color: #EC0F02;

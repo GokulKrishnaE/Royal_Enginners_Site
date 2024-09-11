@@ -20,6 +20,9 @@
         font-weight: 500;
         margin-bottom: 25px;
         color: $tertiary;
+        @include media-breakpoint-down(sm){
+            font-size: 3rem;
+        }
     }
     .hero-desc,.banner-desc{
         font-size: 1.3rem;
@@ -90,7 +93,7 @@
     .slick-arrow{
         font-size: 4.5rem;
         position: absolute;
-        left: 50px;
+        left: 30px;
         top: 50%;
         transform: translateY(-50%);
         @media (min-width:991px) and (max-width:1500px){
@@ -104,7 +107,7 @@
         color: rgb(0, 0, 0);
         font-weight: 300;
         &.right-arrow{
-            right: 50px;
+            right: 30px;
             left: auto;
             @media (min-width:991px) and (max-width:1500px){
                 right: 20px;

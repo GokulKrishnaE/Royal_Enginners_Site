@@ -64,7 +64,7 @@ $('#clients-slider').slick({
   autoplay: true,
   autoplaySpeed: 0,
   cssEase: 'linear',
-  slidesToShow: 7,
+  slidesToShow: 6,
   slidesToScroll: 1,
   infinite: true,
   swipeToSlide: true,
@@ -128,5 +128,13 @@ function navigation(){
     if($(this).find('.nav-link').attr('href') === currentUrl){
       $(this).find('.nav-link').addClass('active')
     }
+  })
+
+
+  $('.desktopHamburger .nav-link').click(function(){
+    $('.deskHamburgerOverlay,.deskHamburgerPopup').addClass('visible')
+  })
+  $('#deskHamburgerClose').click(function(){
+    $('.deskHamburgerOverlay,.deskHamburgerPopup').removeClass('visible')
   })
 }

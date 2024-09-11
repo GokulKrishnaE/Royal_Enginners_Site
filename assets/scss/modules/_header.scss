@@ -1,6 +1,9 @@
 header{
     background-color: $white;
     @include media-breakpoint-up(lg){
+        overflow-x: hidden;
+    }
+    @include media-breakpoint-up(lg){
         position: sticky;
         top: 0;
         z-index: 1050;
@@ -20,6 +23,9 @@ header{
         max-width: 200px;
         @include media-breakpoint-up(lg){
             margin-left: -20px;
+        }
+        @include media-breakpoint-down(sm){
+            max-width: 150px;
         }
     }
     .navbar-nav{
@@ -47,6 +53,9 @@ header{
             transition: all 0.3s ease-in-out;
             &.active,&:hover{
                 border-bottom: 3px solid var(--bs-navbar-active-color);
+            }
+            @include media-breakpoint-down(md){
+                font-size: 1.3rem;
             }
         }
         @include media-breakpoint-down(lg){
@@ -80,7 +89,7 @@ header{
         }
     }
     .navbar-toggler{
-        font-size: 2rem;
+        font-size: 1.5rem;
         border: none !important;
         outline: none !important;
         box-shadow: none !important;
@@ -99,13 +108,13 @@ header{
             }
         }
         .hamburger-bar{
-            width: 35px;
+            width: 30px;
             height: 3px;
             display: block;
             background-color: $primary;
             transition: all 0.4s ease-in-out;
             &.bar2{
-                margin: 8px 0;
+                margin: 5px 0;
                 opacity: 1;
             }
             &.bar1{
@@ -119,9 +128,9 @@ header{
     .navbar-collapse{
         @include media-breakpoint-down(lg){
         position: absolute;
-        inset: 80px 20% auto 0;
+        inset: 0 20% auto 0;
         z-index: 10;
-        height: calc(100vh - 65px);
+        height: 100vh;
         overflow: scroll;
         transition: none;
         transform: translateX(-800px);
@@ -134,8 +143,20 @@ header{
             padding: 10px  25px;
             @include media-breakpoint-down(lg){
                 width: 100%;
+                &:not(:first-child,:last-child){
+                    border-bottom: 1px solid #e7e7e7;
+                }
                 .nav-link.active,.nav-link:hover{
                     border-bottom: none;
+                }
+            }
+            &.logoBox{
+                background-color: rgba($color: $primary, $alpha: 0.1);
+                padding: 20px 0;
+                margin-bottom: 20px;
+                img{
+                    max-width: 140px;
+                    mix-blend-mode: multiply;
                 }
             }
         }
@@ -312,3 +333,103 @@ header{
     }
 }
 
+.desktopHamburger{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    i{
+        font-size: 1.5rem;
+    }
+}
+
+
+.deskHamburgerOverlay{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.8s ease;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: rgb(0 0 0 / 61%);
+    width: 0;
+    height: 100%;
+    &.visible{
+        visibility: visible;
+        opacity: 1;
+        width: 100%;
+    }
+}
+.deskHamburgerPopup{
+    background-color: $white;
+    width: 450px;
+    margin-left: auto;
+    padding: 80px 30px 20px;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    right: -500px;
+    cursor: auto;
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s;
+    -webkit-transition: right ease 1s;
+    transition: right ease 1s;
+    &.visible{
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+    button.deskHamburgerClose{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        border: none;
+        outline: none;
+        color: $tertiary;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 1.3rem;
+    }
+    .logo{
+        max-width: 200px;
+        margin-left: -25px;
+        margin-bottom: 40px;
+    }
+
+    h3{
+        color: $tertiary;
+        font-size: 1.4rem;
+    }
+    .contactItem{
+        position: relative;
+        padding-left: 40px;
+        i{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.1rem;
+            color: $primary;
+        }
+    }
+
+    .socials{
+        display: flex;
+        gap: 15px;
+        margin-top: 40px;
+        .item{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $tertiary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i{
+                font-size: 1.2rem;
+                color: $white;
+            }
+        }
+    }
+
+}

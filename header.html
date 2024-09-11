@@ -1,15 +1,18 @@
 <nav class="navbar navbar-expand-lg" id="navbar">
     <div class="container">
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="hamburger-bar bar1"></span>
-            <span class="hamburger-bar bar2"></span>
-            <span class="hamburger-bar bar3"></span>
-        </button>
         <a class="navbar-brand" href="index.html">
             <img src="./assets/images/logo.jpg" alt="">
         </a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger-bar bar1"></span>
+          <span class="hamburger-bar bar2"></span>
+          <span class="hamburger-bar bar3"></span>
+      </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-0 ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav justify-content-between mb-2 mb-lg-0">
+              <li class="nav-item logoBox d-lg-none">
+                <img src="./assets/images/logo.jpg" alt="">
+              </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html">Home</a>
               </li>
@@ -46,26 +49,27 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact-us.html">Contact</a>
               </li>
-              <li class="nav-item nohover">
+              <!-- <li class="nav-item nohover">
                 <a class="nav-link" href="#">
-                  <!-- <span class="d-inline-block d-sm-none">
-                    Phone <i class="fas fa-phone"></i>
-                  </span> -->
                   <span class="headerIcon phone">
                     <i class="fas fa-phone-volume"></i></a>
                   </span>
               </li>
               <li class="nav-item nohover">
                 <a class="nav-link" href="#">
-                  <!-- <span class="d-inline-block d-sm-none"></span>
-                    Whatsapp <i class="fa-brands fa-whatsapp"></i>
-                  </span> -->
                   <span class="headerIcon whatsapp">
                     <i class="fa-brands fa-whatsapp"></i></a>
                   </span>
-              </li>
+              </li> -->
             </ul>
-          </div>
+            <div class="d-none d-lg-block">
+              <ul class="list-unstyled desktopHamburger">
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)"><i class="fas fa-bars"></i></a>
+                </li>
+              </ul>
+            </div>
+        </div>
     </div>
   </nav>
 
@@ -129,3 +133,41 @@
         </div>
     </div>
   </div>
+
+  <div class="deskHamburgerOverlay">
+    <div class="deskHamburgerPopup">
+      <button class="deskHamburgerClose" id="deskHamburgerClose"><i class="fas fa-xmark"></i></button>
+      <div>
+        <img class="img-fluid logo" src="./assets/images/logo.jpg" alt="">
+        <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, a veniam quod voluptatibus, fuga libero voluptatem officia ipsum minus ullam assumenda repellendus in deserunt blanditiis.</p>
+        <h3>Contact Info</h3>
+        <div class="contactItem">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aliquam?</p>
+        </div>
+        <div class="contactItem">
+          <i class="fas fa-envelope"></i>
+          <p>test@test.com</p>
+        </div>
+        <div class="contactItem">
+          <i class="fas fa-phone"></i>
+          <p>+91 74847839274</p>
+        </div>
+        <div class="socials mt-5">
+          <div class="item">
+            <a href="javascript:void(0)"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+          <div class="item">
+            <a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <div class="item">
+            <a href="javascript:void(0)"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <div class="item">
+            <a href="javascript:void(0)"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 

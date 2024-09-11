@@ -22,6 +22,9 @@
             opacity: 1;
         }
     }
+    @include media-breakpoint-down(sm){
+        font-size: 2rem;
+    }
     &::after{
         content: "";
         position: absolute;
@@ -160,8 +163,6 @@ p.section-content{
     }
 }
 .clients-section{
-    background-color: #fff;
-    padding-bottom: 0;
     .section-title{
         margin-bottom: 60px;
     }
@@ -177,6 +178,13 @@ p.section-content{
             width: 100%;
             aspect-ratio: 3/2;
             object-fit: contain;
+        }
+    }
+    .clients-slider{
+        background-color: #fff;
+        padding: 0 30px;
+        @include media-breakpoint-down(sm){
+            padding: 0 15px;
         }
     }
 }
