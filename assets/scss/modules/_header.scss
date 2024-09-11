@@ -127,7 +127,7 @@ header{
     }
     .navbar-collapse{
         @include media-breakpoint-down(lg){
-        position: absolute;
+        position: fixed;
         inset: 0 20% auto 0;
         z-index: 10;
         height: 100vh;
@@ -138,6 +138,7 @@ header{
         background-color: $white;
         &.show{
             transform: translateX(0); 
+            box-shadow: rgba(0, 0, 0, 0.1) 10px 0px 10px;
         }
         .nav-item{
             padding: 10px  25px;
