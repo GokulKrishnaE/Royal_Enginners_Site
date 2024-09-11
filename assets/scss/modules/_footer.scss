@@ -283,7 +283,7 @@ p.footer-content{
 
 .fixedWhatsapp{
     position: fixed;
-    inset: auto auto 80px 80px;
+    inset: auto 80px 80px auto;
     @include media-breakpoint-down(md){
         inset: auto auto 40px 15px;
     }
