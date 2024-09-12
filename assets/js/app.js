@@ -33,7 +33,7 @@ $(document).ajaxStop(function(){
   $('[data-bs-toggle="tooltip"]').tooltip()
 
   $('.navbar-toggler').click(function(){
-    $('body').toggleClass('overflow-hidden')
+    $('.mobileMenuOverlay').toggleClass('active')
   })
 
   $(window).scroll(function () {
