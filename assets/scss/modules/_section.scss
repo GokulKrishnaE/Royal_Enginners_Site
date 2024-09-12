@@ -183,8 +183,26 @@ p.section-content{
     .clients-slider{
         background-color: #fff;
         padding: 0 30px;
+        border-radius: 10px;
         @include media-breakpoint-down(sm){
             padding: 0 15px;
+        }
+        .slick-arrow{
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: $primary;
+            border-radius: 50%;
+            color: white;
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+            transform: translateY(-50%);
+            left: -20px;
+            &.nextArrow{
+                left: auto;
+                right: -20px;
+            }
         }
     }
 }

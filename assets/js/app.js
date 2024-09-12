@@ -60,29 +60,33 @@ $(document).ajaxStop(function(){
 $('.card-title').matchHeight()
 
 $('#clients-slider').slick({
-  speed: 5000,
   autoplay: true,
-  autoplaySpeed: 0,
-  cssEase: 'linear',
+  autoplaySpeed: 10000,
+  speed: 300,
+  // cssEase: 'linear',
   slidesToShow: 6,
   slidesToScroll: 1,
   infinite: true,
-  swipeToSlide: true,
-  centerMode: true,
-  focusOnSelect: true,
+  // swipeToSlide: true,
+  // centerMode: true,
+  // focusOnSelect: true,
   dots: false,
-  arrows: false,
+  arrows: true,
+  prevArrow: '<button class="prevArrow"><i class="fas fa-chevron-left"></i></button>',
+  nextArrow: '<button class="nextArrow"><i class="fas fa-chevron-right"></i></button>',
   responsive: [
           {
             breakpoint: 991,
             settings: {
               slidesToShow: 2,
+              arrows: false,
             }
           },
           {
             breakpoint: 480,
             settings: {
               slidesToShow: 1,
+              arrows: false,
             }
           }
           ]
